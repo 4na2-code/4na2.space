@@ -6,25 +6,27 @@ if (yearElement) {
 
 const videoDialog = document.querySelector(".video-dialog");
 const videoDialogTitle = document.getElementById("video-dialog-title");
-const videoFrame = videoDialog?.querySelector("iframe");
+const videoPlayer = videoDialog?.querySelector("video");
 const closeVideoButton = videoDialog?.querySelector(".video-dialog-close");
-const watchOnYouTubeLink = videoDialog?.querySelector(".video-dialog-youtube");
+const videoSourceLink = videoDialog?.querySelector(".video-dialog-link");
 
-if (videoDialog instanceof HTMLDialogElement && videoFrame && videoDialogTitle && closeVideoButton && watchOnYouTubeLink) {
-  document.querySelectorAll(".youtube-card[data-video-id]").forEach((card) => {
+if (videoDialog instanceof HTMLDialogElement && videoPlayer && videoDialogTitle && closeVideoButton && videoSourceLink) {
+  document.querySelectorAll(".video-card[data-video-src]").forEach((card) => {
     card.addEventListener("click", (event) => {
       event.preventDefault();
-      const videoId = card.dataset.videoId;
+      const videoSrc = card.dataset.videoSrc;
       const videoTitle = card.dataset.videoTitle;
 
-      if (!videoId || !videoTitle) {
+      if (!videoSrc || !videoTitle) {
         return;
       }
 
       videoDialogTitle.textContent = videoTitle;
-      watchOnYouTubeLink.href = `https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}`;
-      videoFrame.src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?playsinline=1&origin=${encodeURIComponent(window.location.origin)}`;
+      videoSourceLink.href = videoSrc;
+      videoPlayer.src = videoSrc;
+      videoPlayer.load();
       videoDialog.showModal();
+      videoPlayer.play().catch(() => {});
     });
   });
 
@@ -35,6 +37,8 @@ if (videoDialog instanceof HTMLDialogElement && videoFrame && videoDialogTitle &
     }
   });
   videoDialog.addEventListener("close", () => {
-    videoFrame.removeAttribute("src");
+    videoPlayer.pause();
+    videoPlayer.removeAttribute("src");
+    videoPlayer.load();
   });
 }

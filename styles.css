@@ -528,14 +528,16 @@ video.project-media {
   background: #000;
 }
 
+.video-dialog-frame video,
 .video-dialog-frame iframe {
   display: block;
   width: 100%;
   height: 100%;
   border: 0;
+  background: #000;
 }
 
-.video-dialog-youtube {
+.video-dialog-link {
   display: block;
   margin-top: 0.8rem;
   color: var(--muted);
@@ -543,8 +545,8 @@ video.project-media {
   text-align: center;
 }
 
-.video-dialog-youtube:hover,
-.video-dialog-youtube:focus-visible {
+.video-dialog-link:hover,
+.video-dialog-link:focus-visible {
   color: var(--accent);
 }
 

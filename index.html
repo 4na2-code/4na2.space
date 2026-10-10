@@ -155,47 +155,70 @@
         <div class="project-grid" id="project-grid" aria-live="polite">
           <article class="project-card">
             <a
-              class="youtube-card"
-              href="https://www.youtube.com/shorts/AUG_87KCT6k"
-              data-video-id="AUG_87KCT6k"
-              data-video-title="Pagi hari disini."
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Tonton Pagi hari disini. di YouTube"
+              class="youtube-card video-card"
+              href="isi/edit_perumahanakatara.mp4"
+              data-video-src="isi/edit_perumahanakatara.mp4"
+              data-video-title="Edit Perumahan Akatara"
+              aria-label="Tonton Edit Perumahan Akatara"
             >
-              <img
+              <video
                 class="project-media"
-                src="https://img.youtube.com/vi/AUG_87KCT6k/maxresdefault.jpg"
-                alt="Thumbnail Pagi hari disini."
-                loading="lazy"
-              />
+                src="isi/edit_perumahanakatara.mp4"
+                muted
+                playsinline
+                preload="metadata"
+                aria-label="Pratinjau Edit Perumahan Akatara"
+              ></video>
               <span class="youtube-play" aria-hidden="true">▶</span>
             </a>
             <div class="project-info">
-              <h3>Pagi hari disini.</h3>
+              <h3>Edit Perumahan Akatara</h3>
               <p>Karya video dari 4na2.</p>
             </div>
           </article>
           <article class="project-card">
             <a
-              class="youtube-card"
-              href="https://www.youtube.com/shorts/xPEiFsJC-rE"
-              data-video-id="xPEiFsJC-rE"
-              data-video-title="Bertanya kepada Allah"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Tonton Bertanya kepada Allah di YouTube"
+              class="youtube-card video-card"
+              href="isi/edit_wedding_organizer_promotion.mp4"
+              data-video-src="isi/edit_wedding_organizer_promotion.mp4"
+              data-video-title="Wedding Organizer Promotion"
+              aria-label="Tonton Wedding Organizer Promotion"
             >
-              <img
+              <video
                 class="project-media"
-                src="https://img.youtube.com/vi/xPEiFsJC-rE/maxresdefault.jpg"
-                alt="Thumbnail Bertanya kepada Allah"
-                loading="lazy"
-              />
+                src="isi/edit_wedding_organizer_promotion.mp4"
+                muted
+                playsinline
+                preload="metadata"
+                aria-label="Pratinjau Wedding Organizer Promotion"
+              ></video>
               <span class="youtube-play" aria-hidden="true">▶</span>
             </a>
             <div class="project-info">
-              <h3>Bertanya kepada Allah</h3>
+              <h3>Wedding Organizer Promotion</h3>
+              <p>Karya video dari 4na2.</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <a
+              class="youtube-card video-card"
+              href="isi/edit_yallahperbaikilahanakku.mp4"
+              data-video-src="isi/edit_yallahperbaikilahanakku.mp4"
+              data-video-title="Yallah Perbaiki Lahanakku"
+              aria-label="Tonton Yallah Perbaiki Lahanakku"
+            >
+              <video
+                class="project-media"
+                src="isi/edit_yallahperbaikilahanakku.mp4"
+                muted
+                playsinline
+                preload="metadata"
+                aria-label="Pratinjau Yallah Perbaiki Lahanakku"
+              ></video>
+              <span class="youtube-play" aria-hidden="true">▶</span>
+            </a>
+            <div class="project-info">
+              <h3>Ya Allah Perbaikilah Anakku</h3>
               <p>Karya video dari 4na2.</p>
             </div>
           </article>
@@ -211,15 +234,17 @@
             </button>
           </div>
           <div class="video-dialog-frame">
-            <iframe
-              title="Pemutar video YouTube"
-              allow="encrypted-media; picture-in-picture"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <video
+              id="video-dialog-video"
+              class="video-dialog-video"
+              controls
+              playsinline
+              preload="metadata"
+              aria-label="Pemutar video"
+            ></video>
           </div>
-          <a class="video-dialog-youtube" target="_blank" rel="noreferrer">
-            Video tidak bisa diputar? Tonton langsung di YouTube ↗
+          <a class="video-dialog-link" target="_blank" rel="noreferrer">
+            Buka video langsung ↗
           </a>
         </div>
       </dialog>
