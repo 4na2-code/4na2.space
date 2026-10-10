@@ -460,10 +460,6 @@ video.project-media {
 }
 
 .project-thumbnail {
-  display: none;
-}
-
-.project-thumbnail.is-ready {
   position: absolute;
   z-index: 1;
   inset: 0;
