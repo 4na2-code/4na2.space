@@ -157,6 +157,8 @@
             <a
               class="youtube-card"
               href="https://www.youtube.com/shorts/AUG_87KCT6k"
+              data-video-id="AUG_87KCT6k"
+              data-video-title="Pagi hari disini."
               target="_blank"
               rel="noreferrer"
               aria-label="Tonton Pagi hari disini. di YouTube"
@@ -178,6 +180,8 @@
             <a
               class="youtube-card"
               href="https://www.youtube.com/shorts/xPEiFsJC-rE"
+              data-video-id="xPEiFsJC-rE"
+              data-video-title="Bertanya kepada Allah"
               target="_blank"
               rel="noreferrer"
               aria-label="Tonton Bertanya kepada Allah di YouTube"
@@ -197,6 +201,28 @@
           </article>
         </div>
       </section>
+
+      <dialog class="video-dialog" aria-labelledby="video-dialog-title">
+        <div class="video-dialog-content">
+          <div class="video-dialog-header">
+            <h2 id="video-dialog-title"></h2>
+            <button class="video-dialog-close" type="button" aria-label="Tutup video">
+              &times;
+            </button>
+          </div>
+          <div class="video-dialog-frame">
+            <iframe
+              title="Pemutar video YouTube"
+              allow="encrypted-media; picture-in-picture"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <a class="video-dialog-youtube" target="_blank" rel="noreferrer">
+            Video tidak bisa diputar? Tonton langsung di YouTube ↗
+          </a>
+        </div>
+      </dialog>
 
       <section class="contact-section container" id="contact">
         <div class="contact-card">

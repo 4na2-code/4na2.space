@@ -459,6 +459,95 @@ video.project-media {
   object-fit: contain;
 }
 
+.video-dialog {
+  width: min(430px, calc(100vw - 2rem));
+  max-width: none;
+  max-height: 92vh;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-raised);
+  color: var(--text);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
+}
+
+.video-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(5px);
+}
+
+.video-dialog-content {
+  padding: 1rem;
+}
+
+.video-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.video-dialog-header h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.video-dialog-close {
+  display: grid;
+  width: 2rem;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.video-dialog-close:hover,
+.video-dialog-close:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.video-dialog-frame {
+  width: auto;
+  max-width: 100%;
+  height: min(640px, calc(92vh - 5rem));
+  aspect-ratio: 9 / 16;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #000;
+}
+
+.video-dialog-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-dialog-youtube {
+  display: block;
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.video-dialog-youtube:hover,
+.video-dialog-youtube:focus-visible {
+  color: var(--accent);
+}
+
 .project-info {
   padding: 1rem 1.1rem 1.2rem;
 }
